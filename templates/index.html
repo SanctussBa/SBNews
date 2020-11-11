@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block worldnews %}
+<div id="world" class="section-div-top flex-row decor-line-br">
+  <a href="#"><h1>World News</h1></a>
+  <p class="padding-left-10 italic"><small>from</small></p><a class="reference-link" href="https://www.bbc.com/news/world" target="_blank"><p class="padding-left-10 italic"><small>bbc.com</small></p></a>
+</div>
+
+<div class="section-div-mid">
+
+  <div class="article-container flex-column decor-line-br">
+    <img class="article-img" src="{{ five_img[0] }}" alt="No photo Available">
+    <h2 class="article-title">{{ five_headlines[0] }}</h2>
+    <a class="read-more-a" href="{{ five_links[0] }}" target="_blank">Read more</a>
+  </div>
+
+  <div class="article-container flex-column decor-line-br">
+    <img class="article-img" src="{{ five_img[1] }}" alt="No photo Available">
+    <h2 class="article-title">{{ five_headlines[1] }}</h2>
+    <a class="read-more-a" href="{{ five_links[1] }}" target="_blank">Read more</a>
+  </div>
+
+  <div class="article-container flex-column decor-line-br">
+    <img class="article-img" src="{{ five_img[2] }}" alt="No photo Available">
+    <h2 class="article-title">{{ five_headlines[2] }}</h2>
+    <a class="read-more-a" href="{{ five_links[2] }}" target="_blank">Read more</a>
+  </div>
+
+  <div class="article-container flex-column decor-line-br">
+    <img class="article-img" src="{{ five_img[3] }}" alt="No photo Available">
+    <h2 class="article-title">{{ five_headlines[3] }}</h2>
+    <a class="read-more-a" href="{{ five_links[3] }}" target="_blank">Read more</a>
+  </div>
+
+  <div class="article-container flex-column decor-line-br">
+    <img class="article-img" src="{{ five_img[4] }}" alt="No photo Available">
+    <h2 class="article-title">{{ five_headlines[4] }}</h2>
+    <a class="read-more-a" href="{{ five_links[4] }}" target="_blank">Read more</a>
+  </div>
+
+  <div class="section-div-bottom flex-column decor-line-br">
+
+    <a class="other-links inline" href="{{ five_links[5] }}" target="_blank">{{ five_headlines[5] }}</a>
+    <a class="other-links inline" href="{{ five_links[6] }}" target="_blank">{{ five_headlines[6] }}</a>
+    <a class="other-links inline" href="{{ five_links[7] }}" target="_blank">{{ five_headlines[7] }}</a>
+    <a class="other-links inline" href="{{ five_links[8] }}" target="_blank">{{ five_headlines[8] }}</a>
+    <a class="other-links inline" href="{{ five_links[9] }}" target="_blank">{{ five_headlines[9] }}</a>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+{% block localnews %}
+<div id="local" class="section-div-top flex-row decor-line-br">
+  <a href="#"><h1>Local News</h1></a>
+  <p class="padding-left-10 italic"><small>from</small></p><a class="reference-link" href="https://nltimes.nl/" target="_blank"><p class="padding-left-10 italic"><small>nltimes.nl</small></p></a>
+</div>
+
+<div class="section-div-mid">
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_local[0] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_local[0] }}</h2>
+      <a class="read-more-a" href="{{ links_local[0] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_local[1] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_local[1] }}</h2>
+      <a class="read-more-a" href="{{ links_local[1] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_local[2] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_local[2] }}</h2>
+      <a class="read-more-a" href="{{ links_local[2] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_local[3] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_local[3] }}</h2>
+      <a class="read-more-a" href="{{ links_local[3] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_local[4] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_local[4] }}</h2>
+      <a class="read-more-a" href="{{ links_local[4] }}" target="_blank">Read more</a>
+    </div>
+
+
+    <div class="section-div-bottom decor-line-br">
+      <p><a class="other-links inline" href="{{ links_local[5] }}" target="_blank">{{ headlines_local[5] }}</a></p>
+      <a class="other-links inline" href="{{ links_local[6] }}" target="_blank">{{ headlines_local[6] }}</a>
+      <a class="other-links inline" href="{{ links_local[7] }}" target="_blank">{{ headlines_local[7] }}</a>
+      <a class="other-links inline" href="{{ links_local[8] }}" target="_blank">{{ headlines_local[8] }}</a>
+      <a class="other-links inline" href="{{ links_local[9] }}" target="_blank">{{ headlines_local[9] }}</a>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block enterntainmentnews %}
+<div id="ent" class="section-div-top flex-row decor-line-br">
+  <a href="#"><h1>Entertainment News</h1></a>
+  <p class="padding-left-10 italic"><small>from</small></p><a class="reference-link" href="https://collider.com/all-news/#page/1" target="_blank"><p class="padding-left-10 italic"><small>collider.com</small></p></a>
+</div>
+
+<div class="section-div-mid">
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_ent[0] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_ent[0] }}</h2>
+      <a class="read-more-a" href="{{ links_ent[0] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_ent[1] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_ent[1] }}</h2>
+      <a class="read-more-a" href="{{ links_ent[1] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_ent[2] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_ent[2] }}</h2>
+      <a class="read-more-a" href="{{ links_ent[2] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_ent[3] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_ent[3] }}</h2>
+      <a class="read-more-a" href="{{ links_ent[3] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img" src="{{ img_ent[4] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_ent[4] }}</h2>
+      <a class="read-more-a" href="{{ links_ent[4] }}" target="_blank">Read more</a>
+    </div>
+  <div class="section-div-bottom decor-line-br">
+    <p><a class="other-links inline" href="{{ links_ent[5] }}" target="_blank">{{ headlines_ent[5] }}</a></p>
+    <a class="other-links inline" href="{{ links_ent[6] }}" target="_blank">{{ headlines_ent[6] }}</a>
+    <a class="other-links inline" href="{{ links_ent[7] }}" target="_blank">{{ headlines_ent[7] }}</a>
+    <a class="other-links inline" href="{{ links_ent[8] }}" target="_blank">{{ headlines_ent[8] }}</a>
+    <a class="other-links inline" href="{{ links_ent[9] }}" target="_blank">{{ headlines_ent[9] }}</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block technologynews %}
+<div id="tech" class="section-div-top flex-row decor-line-br">
+  <a href="#"><h1>Technology News</h1></a>
+  <p class="padding-left-10 italic"><small>from</small></p><a class="reference-link" href="https://www.wired.co.uk/topic/technology" target="_blank"><p class="padding-left-10 italic"><small>wired.co.uk</small></p></a>
+</div>
+
+<div class="section-div-mid">
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img format-img" src="{{ img_tech[0] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_tech[0] }}</h2>
+      <a class="read-more-a" href="{{ links_tech[0] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img format-img" src="{{ img_tech[1] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_tech[1] }}</h2>
+      <a class="read-more-a" href="{{ links_tech[1] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img format-img" src="{{ img_tech[2] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_tech[2] }}</h2>
+      <a class="read-more-a" href="{{ links_tech[2] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img format-img" src="{{ img_tech[3] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_tech[3] }}</h2>
+      <a class="read-more-a" href="{{ links_tech[3] }}" target="_blank">Read more</a>
+    </div>
+
+    <div class="article-container flex-column decor-line-br">
+      <img class="article-img format-img" src="{{ img_tech[4] }}" alt="No photo Available">
+      <h2 class="article-title">{{ headlines_tech[4] }}</h2>
+      <a class="read-more-a" href="{{ links_tech[4] }}" target="_blank">Read more</a>
+    </div>
+  <div class="section-div-bottom decor-line-br">
+    <p><a class="other-links inline" href="{{ links_tech[5] }}" target="_blank">{{ headlines_tech[5] }}</a></p>
+    <a class="other-links inline" href="{{ links_tech[6] }}" target="_blank">{{ headlines_tech[6] }}</a>
+    <a class="other-links inline" href="{{ links_tech[7] }}" target="_blank">{{ headlines_tech[7] }}</a>
+    <a class="other-links inline" href="{{ links_tech[8] }}" target="_blank">{{ headlines_tech[8] }}</a>
+    <a class="other-links inline" href="{{ links_tech[9] }}" target="_blank">{{ headlines_tech[9] }}</a>
+  </div>
+</div>
+
+{% endblock %}
