@@ -52,14 +52,14 @@ def index():
     only_ten = soup_local.find('section', class_='col-sm-9 sidebar-visible')
 
     local = only_ten.find_all('div', class_="news-card")
-    iter = islice(local, 10)
+    iter = islice(local, 12)
     for i in iter:
     	img_local.append(link_beginning+i.img['src'])
     	links_local.append(link_beginning+i.img.parent['href'])
 
 
     title_tags = only_ten.find_all('div', class_='news-card__title')
-    iter1 = islice(title_tags, 10)
+    iter1 = islice(title_tags, 12)
     for title in iter1:
     	headlines_local.append(title.a.text)
 
@@ -76,7 +76,7 @@ def index():
     links_ent = []
     e = soup_ent.find('div', id="content")
     enter_news = e.find_all("article")
-    iter3 = islice(enter_news, 10)
+    iter3 = islice(enter_news, 12)
     for l in iter3:
         try:
             headlines_ent.append(l.h2.text)
@@ -97,7 +97,7 @@ def index():
     links_tech = []
     t = soup_tech.find('ul', class_="c-card-section__card-list js-c-card-section__card-list")
     tech_news = t.find_all("article")
-    iter3 = islice(tech_news, 10)
+    iter3 = islice(tech_news, 12)
     for x in iter3:
         try:
 
