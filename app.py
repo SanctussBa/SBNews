@@ -29,7 +29,7 @@ def index():
 
     s = soup_world.find('ol', class_="gs-u-m0 gs-u-p0 lx-stream__feed qa-stream")
     li = s.find_all('article')
-    iter = islice(s, 18)
+    iter = islice(s, 20)
     for i in iter:
         try:
             if i.img['src'] and not i.figure and i.img['src'].startswith('https:') and not i.img['sizes'] == '(min-width: 600px) 56px, 48px':
