@@ -108,7 +108,7 @@ def index():
         except (AttributeError, TypeError):
             pass
 
-    return render_template('index.html', quote=quote, five_headlines=five_headlines, five_img=five_img, five_links=five_links, img_local=img_local, headlines_local=headlines_local, links_local=links_local, img_ent=img_ent, headlines_ent=headlines_ent, links_ent=links_ent, img_tech=img_tech, headlines_tech=headlines_tech, links_tech=link_tech)
+    return render_template('index.html', quote=quote, five_headlines=five_headlines, five_img=five_img, five_links=five_links, img_local=img_local, headlines_local=headlines_local, links_local=links_local, img_ent=img_ent, headlines_ent=headlines_ent, links_ent=links_ent, img_tech=img_tech, headlines_tech=headlines_tech, links_tech=links_tech)
 
 @app.route('/about')
 def about():
