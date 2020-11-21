@@ -65,7 +65,7 @@ def index():
 
 #  ------ENTERNTAINMENT NEWS
 
-    url = "https://collider.com/all-news/#page/1"
+    url = "https://ew.com/"
 
     source_ent = requests.get(url).text
     soup_ent = BeautifulSoup(source_ent, 'lxml')
@@ -74,18 +74,29 @@ def index():
     img_ent=[]
     headlines_ent = []
     links_ent = []
-    e = soup_ent.find('div', id="content")
-    enter_news = e.find_all("article")
-    iter3 = islice(enter_news, 12)
+
+    enter_article = soup_ent.find('div', class_="categoryPageListLatest__list karma-main-column")
+    enter_title = enter_article.find_all('div', class_="category-page-item-content-wrapper")
+    enter_img = enter_article.find_all('div', class_="category-page-item-image")
+
+    iter3 = islice(enter_title, 12)
+    iter4 = islice(enter_img, 12)
     for l in iter3:
         try:
-            headlines_ent.append(l.h2.text)
+
+            headlines_ent.append(l.a['data-tracking-content-headline'])
             links_ent.append(l.a['href'])
-            img_ent.append(l.img['src'])
+
 
         except (AttributeError, TypeError):
             pass
 
+    for x in iter4:
+        try:
+            img_ent.append(x.a.div.attrs['data-src'])
+
+        except (AttributeError, TypeError):
+            pass
 # ------------TECHNOLOGY NEWS--------------------
 
     url = "https://www.wired.co.uk/topic/technology"
