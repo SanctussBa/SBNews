@@ -52,14 +52,14 @@ def index():
     only_ten = soup_local.find('section', class_='col-sm-9 sidebar-visible')
 
     local = only_ten.find_all('div', class_="news-card")
-    iter = islice(local, 12)
+    iter = islice(local, 8)
     for i in iter:
     	img_local.append(link_beginning+i.img['src'])
-    	links_local.append(link_beginning+i.img.parent['href'])
+    	links_local.append(link_beginning+i.a['href'])
 
 
     title_tags = only_ten.find_all('div', class_='news-card__title')
-    iter1 = islice(title_tags, 12)
+    iter1 = islice(title_tags, 8)
     for title in iter1:
     	headlines_local.append(title.a.text)
 
@@ -106,15 +106,15 @@ def index():
     img_tech=[]
     headlines_tech = []
     links_tech = []
-    t = soup_tech.find('ul', class_="c-card-section__card-list js-c-card-section__card-list")
-    tech_news = t.find_all("article")
+    t = soup_tech.find('div', class_="summary-list__items")
+    tech_news = t.find_all('div', class_="summary-item summary-item--has-border summary-item--has-rule summary-item--article summary-item--no-icon summary-item--text-align-left summary-item--layout-placement-side-by-side-desktop-only summary-item--layout-position-image-left summary-item--layout-proportions-33-66 summary-item--side-by-side-align-center summary-item--standard SummaryItemWrapper-gdMqwq bGKtzJ summary-list__item")
     iter3 = islice(tech_news, 12)
     for x in iter3:
         try:
 
-            headlines_tech.append(x.a.text)
+            headlines_tech.append(x.h2.text)
             links_tech.append(link_tech + x.a['href'])
-            img_tech.append(x.picture.img['data-src'])
+            img_tech.append(x.picture.img['src'])
 
         except (AttributeError, TypeError):
             pass
