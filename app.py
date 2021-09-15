@@ -55,7 +55,7 @@ def index():
     iter = islice(local, 8)
     for i in iter:
     	img_local.append(link_beginning+i.img['src'])
-    	links_local.append(link_beginning+i.a['href'])
+    	links_local.append(i.a['href'])
 
 
     title_tags = only_ten.find_all('div', class_='news-card__title')
